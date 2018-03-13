@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			function calc(x,y){
+////				return arguments;
+////				alert(arguments[0]);
+////				alert(arguments[1]);
+//				x=arguments[0]?arguments[0]:0;
+//				y=arguments[1]?arguments[1]:1;
+//				return x+y;
+//			}
+//			alert(calc(2,3));
+            function test(){
+            	var paramsNum=arguments.length;
+            	var sum=0;
+            	for(var i=0;i<paramsNum;++i){
+            			sum+=arguments[i];
+            		}
+            	return sum;
+            	}
+//          alert(test(1,2,3,4,5,6,7,8,9,15,344));
+          function test1(){
+          	var paramsNum=arguments.length;
+          	var max=0;
+          	for (var i=0;i<paramsNum-1;i++){
+          		if (arguments[i]>max){
+          			max=arguments[i];
+          		}
+          	}
+          	return max;
+          }
+          alert(test1(123,456,678,798,111));
+		
+			</script>
+	</body>
+</html>

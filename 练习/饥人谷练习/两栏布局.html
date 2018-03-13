@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .layout{
+            border: 1px solid #ccc;
+        }
+        .layout::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .aside1{
+            float: left;
+            width: 200px;
+            height: 400px;
+            background-color: #f00;
+        }
+        .aside2{
+            float: right;
+            width: 200px;
+            height: 400px;
+            background-color: #00f;
+        }
+        .main{
+            background-color: pink;
+            margin-left: 210px;
+            margin-right: 210px;
+            height: 600px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="layout">
+<div class="aside1">aside1</div>
+    <div class="aside2">aside2</div>
+<div class="main">main</div>
+</div>
+</body>
+</html>
