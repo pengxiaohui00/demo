@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //字符串字符的取值范围包括0到9，a到 z，A到Z
+    function getRandStr(len){
+       var str="0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+        var sum=str.length;
+       var str1='';
+        for(var i=0;i<len;i++){
+            str1+=str[Math.floor(Math.random()*sum)];
+        }
+        return str1;
+    }
+    var str = getRandStr(10);
+    console.log(str);
+     // fg4egEuz5y
+</script>
+</body>
+</html>

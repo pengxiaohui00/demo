@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>music</p>
+<script>
+    var xhr=XMLHttpRequest()
+    xhr.open('GET','/cate.json',true)
+    xhr.send()
+    xhr.onload = function(data) {
+        console.log(data);
+    }
+</script>
+</body>
+</html>

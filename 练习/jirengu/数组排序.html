@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var users = [
+        { name: "John", age: 20, company: "Baidu" },
+        { name: "Pete", age: 18, company: "Alibaba" },
+        { name: "Ann", age: 19, company: "Tecent" }
+    ]
+    console.log(users.sort(function(v1,v2){
+        return v1.name > v2.name;
+    }));
+    console.log(users.sort(function(v1,v2){
+        return v1.age - v2.age;
+    }));
+    console.log(users.sort(function (v1,v2){
+        return v1.company > v2.company;
+    } ));
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 返回给定范围内的随机整数,包括min不包括max
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min )) + min;
+    }
+    // 返回给定范围内的随机整数,包括min包括max
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min +1)) + min;
+    }
+    // 返回给定范围内的随机整数,不包括min包括max
+    function getRandomInt(min, max) {
+        return Math.ceil(Math.random() * (max - min )) + min;
+    }
+</script>
+</body>
+</html>

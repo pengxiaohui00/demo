@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //合法的颜色为#000000~ #ffffff
+    function getRandColor(){
+        var arr=[];
+        var str="0123456789abcdef"
+        var str1="#"
+        for(var i=0;i<6;i++){
+            str1+=str[Math.floor(Math.random()*str.length)];
+        }
+        return str1;
+    }
+    var color = getRandColor()
+    console.log(color)   // #38b4d3
+</script>
+</body>
+</html>

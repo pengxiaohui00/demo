@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //    var a = [1,2,3,4,5,6,3,2,1]
+    //    console.log(a.indexOf(2)) //1
+    //    console.log(a.lastIndexOf(2)) //7
+    //    a.forEach(function(e,i,arr){
+    //        arr[i]=e*e;
+    //    });
+    //    console.log(a);//[1, 4, 9, 16, 25, 36, 9, 4, 1]
+    //
+    //    console.log( a.every(function(e,i,arr){
+    //        return e > 5;
+    //    }));//false
+    //    console.log( a.some(function(e,i,arr){
+    //        return e > 5;
+    //    }));//true
+    //    console.log(a.map(function(e){
+    //        return e * e
+    //    }));//[1, 16, 81, 256, 625, 1296, 81, 16, 1]
+    //    console.log(a);//[1, 4, 9, 16, 25, 36, 9, 4, 1]
+    //    console.log(a.filter(function(e){
+    //        return e % 2 == 0;
+    //    }))//[4, 16, 36, 4]
+    //    console.log(a)// [1, 4, 9, 16, 25, 36, 9, 4, 1]
+    //    var b = a.reduce(function(v1, v2){
+    //        return v1 + v2 });
+    //    console.log(b);// 105
+    //    var c = a.reduceRight(function(v1, v2){
+    //        return v1 + v2 }, 10)
+    //    console.log(c);//115
+    //实现一个reduce函数，作用和原生的reduce类似下面的例子。
+    //    var sum = reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0); //6
+    //    function reduce(arr,iterate,initValue){
+    //        var tmpArr = (initValue === undefined ?[]:[initValue].concat(arr))
+    //        while(tmpArr.length>1){
+    //            tmpArr.splice(0,2,iterate(tmpArr[0],tmpArr[1]));
+    //        }
+    //        return tmpArr[0];
+    //    }
+    //    var sum = reduce([3,5,6],function(v1,v2){
+    //        return v1 + v2;
+    //    },10);
+    //    console.log(sum);//24
+
+    //实现一个flatten函数，
+    // 将一个嵌套多层的数组 array（数组）
+    // (嵌套可以是任何层数)转换为只有一层的数组，
+    // 数组中元素仅基本类型的元素或数组，不存在循环引用的情况。
+    //    flatten([1, [2], [3, [[4]]]]) //[1, 2, 3, 4]
+    //    function flatten(arr){
+    //        return arr.reduce(function(arr1,arr2){
+    //            return arr1.concat(Array.isArray(arr2)?flatten(arr2):arr2)
+    //        },[])
+    //    }
+    //
+    //    function flatten2(arr){
+    //        var newArr= [];
+    //            arr.forEach(function(e){
+    //                if(Array.isArray(e)){
+    //                    newArr=newArr.concat(flatten2(e));
+    //                }else {
+    //                    newArr.push(e);
+    //                }
+    //            })
+    //        return newArr;
+    //
+    //    }
+    //var arr = [3, [2, -4, [5, 7]], -3, ['aa', [['bb']]]]
+    //    var arr1=flatten(arr);
+    //    console.log(arr1);//[3, 2, -4, 5, 7, -3, "aa", "bb"]
+    //    var arr2=flatten2(arr);
+    //    console.log(arr2);//[3, 2, -4, 5, 7, -3, "aa", "bb"]
+
+    //    function divisible (arr){
+    //        var arr2=[];
+    //        arr.forEach(function(e){
+    //            if(e%3===0){
+    //                arr2.push(e)
+    //            }
+    //        });
+    //        return arr2.length;
+    //    }
+    //    var arr=[12,123,1234,12345]
+    //    var i=divisible(arr);
+    //    console.log(i);
+</script>
+</body>
+</html>

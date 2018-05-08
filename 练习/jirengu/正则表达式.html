@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //什么是贪婪模式和非贪婪模式
+//    var str="123456789";
+//    console.log(str.match(/\d{3,5}/g));
+//    console.log(str.match(/\d{3,5}?/g));
+//写一个函数isValidUsername(str)，
+// 判断用户输入的是不是合法的用户名
+// （长度6-20个字符，只能包括字母、数字、下划线）。
+    function isValidUsername(str){
+        return /^\w{6,20}$/.test(str);
+    }
+    console.log(isValidUsername('abcd'));
+    console.log(isValidUsername('123456789'));
+    //写一个函数isPhoneNum(str)，判断用户输入的是不是手机号。
+    function isPhoneNum(str) {
+        return /^1[3457]\d{9}$/.test(str);
+    }
+    console.log(isPhoneNum("123abc"));
+    console.log(isPhoneNum("13345677890"));
+//写一个函数isEmail(str)，判断用户输入的是不是邮箱
+    function isEmail2(str) {
+        return /^[a-zA-Z0-9_-]+@[a-z0-9]+(\.[a-z]+){1,3}$/.test(str);
+    }
+    console.log(isEmail2("134166abc@abc.com"));
+    //写一个函数trim(str)，去除字符串两边的空白字符。
+    function trim(str){
+        return str.replace( /^\s+|\s+$/g,"");
+    }
+    console.log(trim("    hello world    "));
+</script>
+</body>
+</html>

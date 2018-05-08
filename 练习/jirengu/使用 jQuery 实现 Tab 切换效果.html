@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+    <title></title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .main{
+            margin-top: 50px;
+        }
+        .main .header:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .main .header .tab{
+            float: left;
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 10px 20px;
+            background-color: #dddddd;
+            cursor: pointer;
+        }
+        .main .header .tab:last-child{
+            border-right: 1px solid #ccc;
+        }
+        .main .header .tab.active{
+            background-color: #fff;
+        }
+        .main .content{
+            border: 1px solid #ccc;
+            background-color: #fff;
+            height: 200px;
+            width: 400px;
+        }
+        .main .theme{
+            display: none;
+            background-color: #fff;
+            padding: 100px;
+        }
+        .main .theme.active{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <div class="tab active">1</div>
+        <div class="tab ">2</div>
+        <div class="tab">3</div>
+        <div class="tab">4</div>
+    </div>
+    <div class="content">
+        <div class="theme active">one</div>
+        <div class="theme ">two</div>
+        <div class="theme">three</div>
+        <div class="theme">four</div>
+    </div>
+</div>
+<script>
+    $(".main  .tab").on('click',function(){
+        console.log(this);
+        $(this).addClass('active')
+                .siblings()
+                .removeClass('active')
+
+        $(this).parents('.main')
+                .find('.theme')
+                .eq($(this).index())
+                .addClass('active')
+                .siblings()
+                .removeClass('active')
+    })
+//      function $$(select){
+//          return document.querySelectorAll(select)
+//      }
+//      $$(".main .tab").forEach(function(node){
+//          node.addEventListener('click',function(){
+//              var index;
+//              this.parentElement.querySelectorAll(".tab").forEach(function(e,x){
+//                  e.classList.remove('active');
+//                  if(node===e){
+//                     index=x;
+//                  }
+//              });
+//              this.classList.add('active');
+//              this.parentElement.nextElementSibling.querySelectorAll(".theme").forEach(function(e){
+//                  e.classList.remove("active")
+//              });
+//              this.parentElement.nextElementSibling.querySelectorAll('.theme')[index].classList.add('active')
+//          })
+//})
+</script>
+</body>
+</html>

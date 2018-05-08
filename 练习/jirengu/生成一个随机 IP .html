@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //一个合法的 IP 地址为 0.0.0.0~255.255.255.255。
+    function getRandIP(){
+         var arr = [];
+        for(var i= 0;i<4;i++){
+            arr.push( Math.floor(Math.random()*256));
+        }
+        return arr.join('.');
+    }
+    var ip = getRandIP()
+    console.log(ip) // 117.3.18.173
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片库</title>
+    <style>
+        ul{
+            margin: 10px auto;
+            text-align: center;
+        }
+        li{
+            display: inline-block;
+            list-style: none;
+            padding: 20px 20px;
+        }
+        div{
+            margin: 0 auto;
+            border: 1px solid #aaaaaa;
+            width: 400px;
+            height: 400px;
+        }
+        div img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--要求：当鼠标放置在li元素上，会在img-preview里展示当前li元素的data-img对应的图片。-->
+<ul class="ct">
+    <li data-img="http://ww1.sinaimg.cn/large/006JM2pKgy1fpmy18g4toj309q063q37.jpg">查看图片1</li>
+    <li data-img="http://ww1.sinaimg.cn/large/006JM2pKgy1fpmy1trlqhj309q06374e.jpg">查看图片2</li>
+    <li data-img="http://ww1.sinaimg.cn/large/006JM2pKgy1fpmy24njg9j309q063jro.jpg">查看图片3</li>
+</ul>
+<div class="img-preview"></div>
+<script>
+    var li=document.querySelectorAll("li");
+    var div=document.querySelector(".img-preview");
+    for(var i=0;i<li.length;i++){
+        li[i].addEventListener('mouseover',function(){
+            var img=this.getAttribute('data-img');
+            div.innerHTML='<img src="'+img+'">';
+        })
+    }
+</script>
+</body>
+</html>

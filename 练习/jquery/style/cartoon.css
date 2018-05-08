@@ -1,0 +1,25 @@
+ul{
+    list-style: none;
+}
+li{
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+.v_content_list a img{
+    display: block;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #aaaaaa;
+}
+.v_content{
+    position: relative;
+}
+.v_content_list{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+
+}
